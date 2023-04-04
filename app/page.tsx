@@ -1,19 +1,14 @@
 "use client";
 
-import Image from "next/image";
-import { Inter } from "next/font/google";
 import styles from "./page.module.css";
+import localFont from "next/font/local";
 
-const inter = Inter({ subsets: ["latin"] });
+const jediFont = localFont({ src: "./fonts/DistantGalaxy.ttf" });
 
 export default function Home() {
   return (
-    // <main className={styles.main}>
-    <div className={styles.spaceBackground}>
-      <div className={styles.stars}>
-        <h1>Hernán Landau</h1>
-      </div>
+    <div className={styles.main}>
+      <div className={jediFont.className +" "+ styles.header}>Star Jedi</div>
     </div>
-    // </main>
   );
 }

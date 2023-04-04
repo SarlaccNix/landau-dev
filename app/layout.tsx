@@ -5,6 +5,8 @@ import Navbar from "./components/Navbar/navbar";
 import { ChakraProvider } from "@chakra-ui/react";
 import { CacheProvider } from "@chakra-ui/next-js";
 import theme from "./theme";
+import "./fonts/StarJedi-DGRW.ttf";
+import "./fonts/DistantGalaxy.ttf"
 
 export const metadata = {
   title: "Mizugomi",
