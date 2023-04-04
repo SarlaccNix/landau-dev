@@ -9,8 +9,12 @@
   /* overflow: hidden; */
 }
 
-.header{
-  color: #FFDE06;
+.video-react .video-react-big-play-button {
+  visibility: hidden !important;
+}
+
+.header {
+  color: #ffde06;
   font-size: 300px;
   overflow: hidden;
   z-index: 1;

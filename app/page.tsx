@@ -4,8 +4,9 @@ import styles from "./page.module.scss";
 import localFont from "next/font/local";
 import bgvideo from "./assets/bgvid.mp4";
 import { useState, useEffect, useRef } from "react";
-import { Player } from "video-react";
+import { Player, BigPlayButton } from "video-react";
 import introVideo from "./assets/envatoIntro.mp4";
+import "video-react/dist/video-react.css";
 
 const jediFont = localFont({ src: "./fonts/DistantGalaxy.ttf" });
 
@@ -13,7 +14,13 @@ export default function Home() {
   const [videoState, setVideoState] = useState(null);
   const [hasEnded, setHasEnded] = useState(false);
   const videoRef = useRef<any>(null);
+
   useEffect(() => {
+    console.log("State", videoRef);
+    const bigPlayButton = document.querySelector(
+      ".video-react-big-play-button"
+    );
+    bigPlayButton.style.display = "none";
     videoRef.current.subscribeToStateChange(setVideoState);
   }, [setVideoState]);
 
@@ -29,16 +36,20 @@ export default function Home() {
       <Player
         ref={videoRef}
         src={introVideo}
+        fluid
+        controls={false}
         autoPlay
         muted
         style={{
-          position: "relative",
+          // position: "relative",
           width: "100%",
           height: "100%",
           left: 0,
           top: 0,
         }}
-      ></Player>
+      >
+        <BigPlayButton style={{ display: "none" }}></BigPlayButton>
+      </Player>
     );
   } else {
     return (
