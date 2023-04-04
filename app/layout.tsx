@@ -6,7 +6,7 @@ import { ChakraProvider } from "@chakra-ui/react";
 import { CacheProvider } from "@chakra-ui/next-js";
 import theme from "./theme";
 import "./fonts/StarJedi-DGRW.ttf";
-import "./fonts/DistantGalaxy.ttf"
+import "./fonts/DistantGalaxy.ttf";
 
 export const metadata = {
   title: "Mizugomi",
@@ -25,7 +25,7 @@ export default function RootLayout({
           <CacheProvider>
             <ChakraProvider theme={theme}>
               <Navbar />
-              {children}
+              <div className="video">{children}</div>
             </ChakraProvider>
           </CacheProvider>
         </main>

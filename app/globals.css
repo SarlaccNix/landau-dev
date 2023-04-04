@@ -94,10 +94,10 @@
 html,
 body {
   margin: 0;
-  background-image: url("http://lukedowding.com/img/space.jpg");
+  /* background-image: url("http://lukedowding.com/img/space.jpg");
   background-size: cover;
   background-repeat: repeat-y;
-  animation: move-stars 60s linear infinite;
+  animation: move-stars 60s linear infinite; */
 }
 
 a {
